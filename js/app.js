@@ -111,13 +111,3 @@ document.querySelectorAll(".start-app").forEach(button=>{
     });
 
 });
-
-const startupSound = new Audio("assets/music/startup.mp3");
-
-window.addEventListener("load",()=>{
-
-    startupSound.volume = 0.5;
-
-    startupSound.play().catch(()=>{});
-
-});s

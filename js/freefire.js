@@ -3,7 +3,47 @@
 // FREE FIRE
 //==============================
 
+//==============================
+// TITANOS
+// FREE FIRE LITE
+//==============================
+
 function freefireApp(){
+
+    return `
+
+    <div class="ff-menu">
+
+        <img src="assets/icons/freefire.png" width="120">
+
+        <h1>FREE FIRE LITE</h1>
+
+        <p>Sobrevive a los bots y consigue la mayor puntuación.</p>
+
+        <button onclick="startFreeFire()">
+
+            ▶ JUGAR
+
+        </button>
+
+    </div>
+
+    `;
+
+}
+
+let freeFireMusic = null;
+
+function freefireApp(){
+
+    if(!freeFireMusic){
+
+        freeFireMusic = new Audio("assets/music/startup.mp3");
+        freeFireMusic.loop = true;
+    }
+
+    freeFireMusic.currentTime = 0;
+    freeFireMusic.play();
 
     return `
 
@@ -21,11 +61,7 @@ function freefireApp(){
 
             <h1>🔥 Free Fire</h1>
 
-            <p>Muy pronto disponible...</p>
-
-            <button onclick="alert('Todavía no está instalado 😎')">
-                Abrir juego
-            </button>
+            <p>Booyah!</p>
 
         </div>
 

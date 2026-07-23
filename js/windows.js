@@ -83,14 +83,21 @@ function createWindow(appId, title, content){
 
     windowElement.querySelector(".close-btn").onclick = ()=>{
 
-        delete openedWindows[appId];
+    // Si se cierra Free Fire, detener la música
+    if(appId === "freefire" && freeFireMusic){
 
-        taskButton.remove();
+        freeFireMusic.pause();
+        freeFireMusic.currentTime = 0;
 
-        windowElement.remove();
+    }
 
-    };
+    delete openedWindows[appId];
 
+    taskButton.remove();
+
+    windowElement.remove();
+
+};
     //--------------------------------
 
     windowElement.querySelector(".minimize-btn").onclick = ()=>{
