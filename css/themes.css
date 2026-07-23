@@ -1,0 +1,793 @@
+/* ========================= */
+/* CALCULADORA               */
+/* ========================= */
+
+.calculator{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+#calc-display{
+
+    height:60px;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+    text-align:right;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ececec;
+
+}
+
+.calculator-buttons{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+
+}
+
+.calculator-buttons button{
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    background:#dbeafe;
+
+    transition:.2s;
+
+}
+
+.calculator-buttons button:hover{
+
+    background:#bfdbfe;
+
+}
+
+.equal{
+
+    grid-column:span 2;
+
+    background:#2563eb !important;
+
+    color:white;
+
+}
+
+.equal:hover{
+
+    background:#1d4ed8 !important;
+
+}
+
+/* ========================= */
+/* BLOC DE NOTAS             */
+/* ========================= */
+
+.notes-app{
+
+    width:100%;
+    height:100%;
+
+}
+
+#notes-textarea{
+
+    width:100%;
+    height:100%;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    font-size:18px;
+
+    font-family:Consolas, monospace;
+
+    line-height:1.6;
+
+    padding:15px;
+
+}
+
+/* ========================= */
+/* SNAKE                     */
+/* ========================= */
+
+.snake-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    height:100%;
+
+}
+
+.snake-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.snake-info button{
+
+    padding:8px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.snake-info button:hover{
+
+    background:#1d4ed8;
+
+}
+
+#snakeCanvas{
+
+    border:3px solid #1f2937;
+
+    background:#111827;
+
+    align-self:center;
+
+}
+
+/*==============================*/
+/* EXPLORADOR                   */
+/*==============================*/
+
+.explorer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.explorer-toolbar{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+}
+
+.explorer-toolbar button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.explorer-toolbar button:hover{
+
+    background:#1d4ed8;
+
+}
+
+#explorer-files{
+
+    flex:1;
+
+    overflow:auto;
+
+}
+
+.file{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px;
+
+    margin-bottom:8px;
+
+    border-radius:8px;
+
+    background:#f3f4f6;
+
+}
+
+.file button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+/*==============================*/
+/* SETTINGS                     */
+/*==============================*/
+
+.settings{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.wallpaper-list{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.wallpaper-list button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.wallpaper-list button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.settings hr{
+
+    margin:15px 0;
+
+}
+
+.dark-mode .window{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+.dark-mode .window-content{
+
+    background:#111827;
+
+    color:white;
+
+}
+
+.dark-mode #taskbar{
+
+    background:rgba(10,10,10,.85);
+
+}
+
+.dark-mode #calc-display{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+.dark-mode #notes-textarea{
+
+    background:#111827;
+
+    color:white;
+
+}
+
+.file{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px;
+
+    margin-bottom:8px;
+
+    border-radius:10px;
+
+    transition:.2s;
+
+    background:#eef2ff;
+
+}
+
+.file:hover{
+
+    background:#dbeafe;
+
+}
+
+.file-name{
+
+    font-size:17px;
+
+}
+
+.file-actions{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.file-actions button{
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:white;
+
+    transition:.2s;
+
+}
+
+.file-actions button:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/*==============================*/
+/* DIALOG                       */
+/*==============================*/
+
+.dialog-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.dialog{
+
+    width:380px;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.dialog input{
+
+    padding:10px;
+
+    font-size:16px;
+
+}
+
+.dialog-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+}
+
+.dialog-buttons button{
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.dialog-buttons button:last-child{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.dark-mode .dialog{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+.dark-mode .dialog input{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+/*==============================*/
+/* GALLERY                      */
+/*==============================*/
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+
+    gap:18px;
+
+}
+
+.gallery-item{
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+.gallery-item:hover{
+
+    transform:scale(1.04);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:130px;
+
+    object-fit:cover;
+
+}
+
+.image-viewer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.viewer-image{
+
+    width:100%;
+
+    max-height:420px;
+
+    object-fit:contain;
+
+}
+
+.wallpaper-button{
+
+    padding:12px 24px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+.wallpaper-button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/*==============================*/
+/* MUSIC PLAYER                 */
+/*==============================*/
+
+.music-player{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.music-info{
+
+    text-align:center;
+
+}
+
+.music-info img{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.controls button{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+}
+
+.controls button:hover{
+
+    transform:scale(1.1);
+
+}
+
+.volume{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+#playlist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    max-height:220px;
+
+    overflow:auto;
+
+}
+
+.song{
+
+    padding:12px;
+
+    background:#f3f4f6;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.song:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+#progress{
+
+    width:100%;
+
+}
+
+/*==============================*/
+/* SETTINGS                     */
+/*==============================*/
+
+.settings-layout{
+
+    display:flex;
+
+    height:100%;
+
+}
+
+.settings-menu{
+
+    width:220px;
+
+    border-right:1px solid #ddd;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    padding:15px;
+
+}
+
+.settings-menu button{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    text-align:left;
+
+}
+
+.settings-menu button:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.settings-content{
+
+    flex:1;
+
+    padding:25px;
+
+    overflow:auto;
+
+}
+
+.settings-content button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.settings-content input{
+
+    width:100%;
+
+}

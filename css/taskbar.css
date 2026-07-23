@@ -1,0 +1,131 @@
+/* ============================= */
+/* TITANOS - TASKBAR             */
+/* ============================= */
+
+#taskbar{
+
+    position:fixed;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 15px;
+
+    background:rgba(20,25,40,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    z-index:5000;
+
+}
+
+/* ============================= */
+/* BOTÓN INICIO                  */
+/* ============================= */
+
+#start-button{
+
+    width:120px;
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#start-button:hover{
+
+    background:#3b82f6;
+
+    transform:scale(1.05);
+
+}
+
+/* ============================= */
+/* APLICACIONES ABIERTAS          */
+/* ============================= */
+
+#opened-apps{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* Botón de aplicación */
+
+.open-app{
+
+    width:46px;
+    height:46px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.10);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.open-app:hover{
+
+    background:rgba(255,255,255,.20);
+
+}
+
+/* ============================= */
+/* RELOJ                         */
+/* ============================= */
+
+#clock{
+
+    width:90px;
+
+    color:white;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    user-select:none;
+
+}

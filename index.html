@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TITANOS</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/taskbar.css">
+    <link rel="stylesheet" href="css/windows.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/snake.css">
+    <link rel="stylesheet" href="css/themes.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- PANTALLA DE CARGA -->
+    <!-- ========================= -->
+
+    <div id="loading-screen">
+
+        <h1>TITANOS</h1>
+
+        <p>Iniciando sistema...</p>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- ESCRITORIO -->
+    <!-- ========================= -->
+
+    <div id="desktop">
+
+        <!-- Iconos del escritorio -->
+        <div id="desktop-icons">
+
+            <div class="icon" data-app="filesystem">
+                <img src="assets/icons/folder.jpg" alt="">
+                <span>Archivos</span>
+            </div>
+
+            <div class="icon" data-app="notes">
+                <img src="assets/icons/notes.png" alt="">
+                <span>Notas</span>
+            </div>
+
+            <div class="icon" data-app="calculator">
+                <img src="assets/icons/calculator.jpg" alt="">
+                <span>Calculadora</span>
+            </div>
+
+            <div class="icon" data-app="gallery">
+                <img src="assets/icons/gallery.png" alt="">
+                <span>Galería</span>
+            </div>
+
+            <div class="icon" data-app="music">
+                <img src="assets/icons/music.png" alt="">
+                <span>Música</span>
+            </div>
+
+            <div class="icon" data-app="settings">
+                <img src="assets/icons/settings.png" alt="">
+                <span>Configuración</span>
+            </div>
+
+            <div class="icon" data-app="snake">
+                <img src="assets/icons/snake.png" alt="">
+                <span>Snake</span>
+            </div>
+
+        </div>
+
+        <!-- Aquí aparecerán las ventanas -->
+        <div id="windows-container"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- BARRA DE TAREAS -->
+    <!-- ========================= -->
+
+    <footer id="taskbar">
+
+        <button id="start-button">
+            TITANOS
+        </button>
+
+        <div id="opened-apps"></div>
+
+        <div id="clock">
+            00:00
+        </div>
+
+    </footer>
+
+    <!-- ========================= -->
+    <!-- MENÚ INICIO -->
+    <!-- ========================= -->
+
+    <div id="start-menu">
+
+    <h2>TITANOS</h2>
+
+    <input
+        type="text"
+        id="app-search"
+        placeholder="Buscar aplicación..."
+    >
+
+    <div id="app-list">
+
+        <button class="start-app" data-app="filesystem">📁 Explorador</button>
+
+        <button class="start-app" data-app="notes">📝 Bloc de Notas</button>
+
+        <button class="start-app" data-app="calculator">🧮 Calculadora</button>
+
+        <button class="start-app" data-app="gallery">🖼️ Galería</button>
+
+        <button class="start-app" data-app="music">🎵 Música</button>
+
+        <button class="start-app" data-app="settings">⚙ Configuración</button>
+
+        <button class="start-app" data-app="snake">🐍 Snake</button>
+
+    </div>
+
+</div>
+
+    <!-- ========================= -->
+    <!-- NOTIFICACIONES -->
+    <!-- ========================= -->
+
+    <div id="notification-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/windows.js"></script>
+    <script src="js/desktop.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/filesystem.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/freefire.js"></script>
+
+</body>
+
+</html>
