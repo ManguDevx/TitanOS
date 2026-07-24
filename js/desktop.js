@@ -117,7 +117,7 @@ break;
 
     case "freefire":
 
-    createWindow(
+        createWindow(
 
         "freefire",
 
@@ -127,7 +127,7 @@ break;
 
     );
 
-break;
+    break;
 
 break;
 

@@ -1,3 +1,5 @@
+console.log("FREE FIRE GAME CARGADO");
+
 //==============================
 // FREE FIRE LITE
 //==============================
@@ -22,7 +24,7 @@ let ctx;
     {x:420,y:260,size:40},
     {x:610,y:180,size:40}
 
-];
+    ];
 
 let medkit = {
 
@@ -67,7 +69,9 @@ const keys={};
 
 function startFreeFire(){
 
-    const content=document.querySelector(".window-content");
+    const content = document.querySelector(
+    '[data-app="freefire"] .window-content'
+);
 
     content.innerHTML=`
 

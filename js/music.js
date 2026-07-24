@@ -35,7 +35,7 @@ const playlist = [
 
 ];
 
-let player = new Audio();
+let player1 = new Audio();
 
 let currentSong = 0;
 
@@ -43,7 +43,7 @@ function musicApp(){
 
     return `
 
-    <div class="music-player">
+    <div class="music-player1">
 
         <div class="music-info">
 
@@ -155,9 +155,9 @@ function playSong(index){
 
     currentSong=index;
 
-    player.src=playlist[index].file;
+    player1.src=playlist[index].file;
 
-    player.play();
+    player1.play();
 
     document.getElementById("cover").src=playlist[index].cover;
 
@@ -169,13 +169,13 @@ function playSong(index){
 
 function togglePlay(){
 
-    if(player.paused){
+    if(player1.paused){
 
-        player.play();
+        player1.play();
 
     }else{
 
-        player.pause();
+        player1.pause();
 
     }
 
@@ -211,21 +211,21 @@ function previousSong(){
 
 function changeVolume(value){
 
-    player.volume=value;
+    player1.volume=value;
 
 }
 
-player.ontimeupdate=function(){
+player1.ontimeupdate=function(){
 
     const progress=document.getElementById("progress");
 
     if(!progress) return;
 
-    progress.value=(player.currentTime/player.duration)*100 || 0;
+    progress.value=(player1.currentTime/player.duration)*100 || 0;
 
 }
 
-player.onended=function(){
+player1.onended=function(){
 
     nextSong();
 

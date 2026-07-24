@@ -6,8 +6,8 @@
 let snake;
 let food;
 let direction;
-let gameLoop;
-let score;
+let gameLoop1;
+let score1;
 let bestScore;
 
 function snakeApp() {
@@ -18,7 +18,7 @@ function snakeApp() {
 
             <div class="snake-info">
 
-                <span>Puntos: <strong id="score">0</strong></span>
+                <span>Puntos: <strong id="score1">0</strong></span>
 
                 <span>Récord: <strong id="best-score">${localStorage.getItem("snake-best") || 0}</strong></span>
 
@@ -58,9 +58,9 @@ function startSnake(){
 
     food = randomFood();
 
-    clearInterval(gameLoop);
+    clearInterval(gameLoop1);
 
-    gameLoop = setInterval(update,120);
+    gameLoop1 = setInterval(update,120);
 
     function update(){
 
@@ -83,7 +83,7 @@ function startSnake(){
             snake.some(s=>s.x===head.x && s.y===head.y)
         ){
 
-            clearInterval(gameLoop);
+            clearInterval(gameLoop1);
 
             alert("Game Over");
 
@@ -95,7 +95,7 @@ function startSnake(){
 
         if(head.x===food.x && head.y===food.y){
 
-            score++;
+            score1++;
 
             if(score>bestScore){
 
